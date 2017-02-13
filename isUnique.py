@@ -5,7 +5,8 @@
 import sys
 import array
 
-def isUnique( string ):
+
+def isUnique(string):
     a = array.array('i', (0 for i in range(0, 127)))
     for value in string:
         if a[ord(value)] == 1:
@@ -13,9 +14,10 @@ def isUnique( string ):
         a[ord(value)] = 1
     return True
 
+
 def printMe(string):
-    print('isUnique : ' + str(isUnique(string)))
-    return
+    print(string + ' isUnique : ' + str(isUnique(string)))
+
 
 "Test Cases"
 printMe('abcdefghsssjkl')
